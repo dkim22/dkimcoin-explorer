@@ -2,8 +2,12 @@ import React, { Component } from "react";
 import { injectGlobal } from "styled-components";
 import AppPresenter from "./AppPresenter";
 import reset from "styled-reset";
+import typography from "../../typography";
 
-const baseStyles = () => injectGlobal`${reset}`;
+const baseStyles = () => injectGlobal`
+    ${reset};
+    ${typography}
+`;
 
 class AppContainer extends Component {
   render() {
