@@ -23,7 +23,7 @@ const Main = styled.main`
   }
 `;
 
-const AppPresenter = ({ isLoading, Transactions, Blocks }) => (
+const AppPresenter = ({ isLoading, transactions, blocks }) => (
   <BrowserRouter>
     <AppContainer>
       <Header />
@@ -34,7 +34,7 @@ const AppPresenter = ({ isLoading, Transactions, Blocks }) => (
               exact
               path={`/`}
               render={() => (
-                <Home blocks={blocks.slice(0, 5)} Transactions={Transactions.slice(0, 5)} />
+                <Home blocks={blocks.slice(0, 5)} transactions={transactions.slice(0, 5)} />
               )}
             />
             <Route exact path={`/blocks`} render={() => <Blocks blocks={blocks} />} />
